@@ -12,6 +12,7 @@ setwd("C:/Users/romdj/OneDrive/Doing Data Science/Intro to Data Science/INFO627.
 # We then import all the spreadsheets which have .csv extensions (all the 44 police forces)
 
 files = list.files(pattern="*.csv")
+
 data_list = lapply(files, read.csv, header = TRUE)
 
 # We now join up all the spreadsheets for all the police forces for the month.
@@ -25,64 +26,103 @@ head(uk_crime_jan_17$Month)
 # Let's do the same for all the months for which we obtained data, i.e January to November 2017.
 
 setwd("C:/Users/romdj/OneDrive/Doing Data Science/Intro to Data Science/INFO627.Rproj/UK Crimes - 17/UK Crimes - Feb 17")
+
 files = list.files(pattern="*.csv")
+
 data_list = lapply(files, read.csv, header = TRUE)
+
 uk_crime_feb_17 <- do.call(rbind, data_list)
+
 head(uk_crime_feb_17$Month)
 
 setwd("C:/Users/romdj/OneDrive/Doing Data Science/Intro to Data Science/INFO627.Rproj/UK Crimes - 17/UK Crimes - Mar 17")
+
 files = list.files(pattern="*.csv")
+
 data_list = lapply(files, read.csv, header = TRUE)
+
 uk_crime_mar_17 <- do.call(rbind, data_list)
+
 head(uk_crime_mar_17$Month)
 
 
 setwd("C:/Users/romdj/OneDrive/Doing Data Science/Intro to Data Science/INFO627.Rproj/UK Crimes - 17/UK Crimes - Apr 17")
+
 files = list.files(pattern="*.csv")
+
 data_list = lapply(files, read.csv, header = TRUE)
+
 uk_crime_apr_17 <- do.call(rbind, data_list)
+
 head(uk_crime_apr_17$Month)
 
 setwd("C:/Users/romdj/OneDrive/Doing Data Science/Intro to Data Science/INFO627.Rproj/UK Crimes - 17/UK Crimes - May 17")
+
 files = list.files(pattern="*.csv")
+
 data_list = lapply(files, read.csv, header = TRUE)
+
 uk_crime_may_17 <- do.call(rbind, data_list)
+
 head(uk_crime_may_17$Month)
 
 setwd("C:/Users/romdj/OneDrive/Doing Data Science/Intro to Data Science/INFO627.Rproj/UK Crimes - 17/UK Crimes - Jun 17")
+
 files = list.files(pattern="*.csv")
+
 data_list = lapply(files, read.csv, header = TRUE)
+
 uk_crime_jun_17 <- do.call(rbind, data_list)
+
 head(uk_crime_jun_17$Month)
 
 setwd("C:/Users/romdj/OneDrive/Doing Data Science/Intro to Data Science/INFO627.Rproj/UK Crimes - 17/UK Crimes - Jul 17")
 files = list.files(pattern="*.csv")
+
 data_list = lapply(files, read.csv, header = TRUE)
+
 uk_crime_jul_17 <- do.call(rbind, data_list)
+
 head(uk_crime_jul_17$Month)
 
 setwd("C:/Users/romdj/OneDrive/Doing Data Science/Intro to Data Science/INFO627.Rproj/UK Crimes - 17/UK Crimes - Aug 17")
+
 files = list.files(pattern="*.csv")
+
 data_list = lapply(files, read.csv, header = TRUE)
+
 uk_crime_aug_17 <- do.call(rbind, data_list)
+
 head(uk_crime_aug_17$Month)
 
 setwd("C:/Users/romdj/OneDrive/Doing Data Science/Intro to Data Science/INFO627.Rproj/UK Crimes - 17/UK Crimes - Sep 17")
+
 files = list.files(pattern="*.csv")
+
 data_list = lapply(files, read.csv, header = TRUE)
+
 uk_crime_sep_17 <- do.call(rbind, data_list)
+
 head(uk_crime_sep_17$Month)
 
 setwd("C:/Users/romdj/OneDrive/Doing Data Science/Intro to Data Science/INFO627.Rproj/UK Crimes - 17/UK Crimes - Oct 17")
+
 files = list.files(pattern="*.csv")
+
 data_list = lapply(files, read.csv, header = TRUE)
+
 uk_crime_oct_17 <- do.call(rbind, data_list)
+
 head(uk_crime_oct_17$Month)
 
 setwd("C:/Users/romdj/OneDrive/Doing Data Science/Intro to Data Science/INFO627.Rproj/UK Crimes - 17/UK Crimes - Nov 17")
+
 files = list.files(pattern="*.csv")
+
 data_list = lapply(files, read.csv, header = TRUE)
+
 uk_crime_nov_17 <- do.call(rbind, data_list)
+
 head(uk_crime_nov_17$Month)
 
 # We now have all the spreadsheets of the police forces, all joined up according to the month.
@@ -91,6 +131,7 @@ head(uk_crime_nov_17$Month)
 uk_crime_2017 <- do.call(rbind, list(uk_crime_jan_17, uk_crime_feb_17, uk_crime_mar_17, uk_crime_apr_17, uk_crime_may_17, uk_crime_jun_17, uk_crime_jul_17, uk_crime_aug_17, uk_crime_sep_17, uk_crime_oct_17, uk_crime_nov_17))
 
 #That went well, we now have our super data of 483 files called uk_crime_2017
+
 # In order not to lose our new creation when we need it, we will export the data set in a chosen directory and folder.
 
 setwd("C:/Users/romdj/OneDrive/Doing Data Science/Intro to Data Science/INFO627.Rproj")
