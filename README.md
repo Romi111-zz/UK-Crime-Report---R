@@ -142,9 +142,13 @@ freq(crime_2017$Falls.within)
 
 
 crime_2017_map <- na.omit(crime_2017)
+
 crime_2017_coords <- cbind(Longitude = as.numeric(as.character(crime_2017_map$Longitude)), latitude = as.numeric(as.character(crime_2017_map$Latitude)))
+
 library("sp")
+
 crime_2017.pts <- SpatialPointsDataFrame(crime_2017_coords, crime_2017_map[ , -(5:6)], proj4string = CRS("+init=epsg:4326"))
+
 plot(crime_2017.pts, pch = ".", col = "red")
 
 # Looking at the types of crimes committed
@@ -158,6 +162,7 @@ freq(crime_2017$Month)
 
 # Number of crimes overtime
 monthly <- table(crime_2017$Month)
+
 plot(monthly, col = "purple", main = "Crimes in the UK per months", lwd = 20, type = "b", ylim = c(0, max(monthly)*1.1), ylab = "Number of crimes", xlab = "Month")
 
 # Looking at how the offences are dealt with how the information is recorded
